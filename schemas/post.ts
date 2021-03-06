@@ -1,12 +1,12 @@
 import mongoose, { Document, Schema } from "mongoose";
 
 export enum PostDocument {
-    schemaName = "posts",
+    schemaName = "post",
     title = "title",
     body = "body",
 }
 
-interface IPost extends Document {
+export interface IPost extends Document {
     [PostDocument.body]?: string;
     [PostDocument.title]?: string;
 }
